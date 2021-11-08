@@ -10,6 +10,9 @@ namespace Brewery.Data
         public DbSet<WholeSalerEntity> WholeSalers { get; set; }
         public DbSet<BeerStockEntity> BeerStocks { get; set; }
 
+        public BreweryDbContext() : base()
+        { }
+
         public BreweryDbContext(DbContextOptions<BreweryDbContext> options)
             : base(options)
         { }
@@ -24,7 +27,7 @@ namespace Brewery.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseInMemoryDatabase("BreweryDb");
+            optionsBuilder.UseSqlite($"Data Source='../db.sqlite'");
         }
 
     }

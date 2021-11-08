@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.6.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brewery.API", "Brewery.API\Brewery.API.csproj", "{94B665D7-0867-4669-8601-A16BDD7D959C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brewery.API", "Brewery.API\Brewery.API.csproj", "{94B665D7-0867-4669-8601-A16BDD7D959C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brewery.Data", "Brewery.Data\Brewery.Data.csproj", "{B748E7C2-40A5-4449-91CF-31E7DE3C0446}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brewery.Data", "Brewery.Data\Brewery.Data.csproj", "{B748E7C2-40A5-4449-91CF-31E7DE3C0446}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Brewery.Test", "Brewery.Test\Brewery.Test.csproj", "{D9CEC997-1C7D-4837-9492-5346C2DF3BFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brewery.Test", "Brewery.Test\Brewery.Test.csproj", "{D9CEC997-1C7D-4837-9492-5346C2DF3BFF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Brewery.Seed", "Brewery.Seed\Brewery.Seed.csproj", "{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{94B665D7-0867-4669-8601-A16BDD7D959C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +57,23 @@ Global
 		{D9CEC997-1C7D-4837-9492-5346C2DF3BFF}.Release|x64.Build.0 = Release|Any CPU
 		{D9CEC997-1C7D-4837-9492-5346C2DF3BFF}.Release|x86.ActiveCfg = Release|Any CPU
 		{D9CEC997-1C7D-4837-9492-5346C2DF3BFF}.Release|x86.Build.0 = Release|Any CPU
+		{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}.Debug|x64.Build.0 = Debug|Any CPU
+		{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}.Debug|x86.Build.0 = Debug|Any CPU
+		{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}.Release|x64.ActiveCfg = Release|Any CPU
+		{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}.Release|x64.Build.0 = Release|Any CPU
+		{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}.Release|x86.ActiveCfg = Release|Any CPU
+		{9A519D47-CB49-45C8-AEEB-EF19FD8B7D65}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {568A000F-E1C2-4BFF-94E1-61596DA874A1}
 	EndGlobalSection
 EndGlobal

@@ -9,15 +9,19 @@ namespace Brewery.Data.Entities
         public double AlcoholLevel { get; set; }
         public double Price { get; set; }
         public BreweryEntity Brewery { get; set; }
-        public List<WholeSalerEntity> WholeSalers { get; set; }
+        public List<BeerStockEntity> BeerStocks { get; set; }
 
-        public BeerEntity(string name, double alcoholLevel, double price, BreweryEntity brewery)
+        public BeerEntity(string name, double alcoholLevel, double price)
         {
             this.Name = name;
             this.AlcoholLevel = alcoholLevel;
             this.Price = price;
+            this.BeerStocks = new List<BeerStockEntity>();
+        }
+
+        public BeerEntity(string name, double alcoholLevel, double price, BreweryEntity brewery) : this(name, alcoholLevel, price)
+        {
             this.Brewery = brewery;
-            this.WholeSalers = new List<WholeSalerEntity>();
         }
     }
 }

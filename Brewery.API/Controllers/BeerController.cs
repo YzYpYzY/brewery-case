@@ -30,9 +30,10 @@ namespace Brewery.API.Controllers
         {
             var dtos = _ctx.Beers
                 .Include(b => b.Brewery)
-                .Include(b => b.WholeSalers)
+                .Include(b => b.BeerStocks).ThenInclude(bs => bs.WholeSaler)
                 .Select(b => new BeerDTO(b))
-                .OrderBy(b => b.BreweryName);
+                .AsEnumerable()
+                .OrderBy(b => b.Brewery.Name);
 
             return Ok(dtos.ToList());
         }
@@ -47,7 +48,8 @@ namespace Brewery.API.Controllers
                 return NotFound($"Brewery with id {dto.BreweryId} doesn't exist.");
             }
 
-            var entity = new BeerEntity(dto.Name, dto.AlcoholLevel, dto.Price, brewery);
+            var entity = new BeerEntity(dto.Name, dto.AlcoholLevel, dto.Price);
+            entity.Brewery = brewery;
             _ctx.Beers.Add(entity);
             _ctx.SaveChanges();
 
@@ -65,6 +67,7 @@ namespace Brewery.API.Controllers
                 return NotFound($"Beer with id {id} doesn't exist.");
             }
 
+            _ctx.BeerStocks.RemoveRange(_ctx.BeerStocks.Where(bs => bs.Beer.Id == id));
             _ctx.Beers.Remove(beer);
             _ctx.SaveChanges();
 

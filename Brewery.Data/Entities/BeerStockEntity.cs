@@ -7,11 +7,15 @@ namespace Brewery.Data.Entities
         public BeerEntity Beer { get; set; }
         public int Quantity { get; set; }
 
-        public BeerStockEntity(WholeSalerEntity wholeSaler, BeerEntity beer, int quantity)
+        public BeerStockEntity(int quantity)
+        {
+            this.Quantity = quantity;
+        }
+
+        public BeerStockEntity(WholeSalerEntity wholeSaler, BeerEntity beer, int quantity): this(quantity)
         {
             this.WholeSaler = wholeSaler;
             this.Beer = beer;
-            this.Quantity = quantity;
         }
     }
 }
