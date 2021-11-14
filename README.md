@@ -26,3 +26,9 @@ rm -f db.sqlite
 ```bash
 dotnet ef migrations add InitialCreate --project Brewery.Data/Brewery.Data.csproj
 ```
+
+## TODOS
+
+- [ ] Implement Business Layer
+- [ ] Manage Errors with exceptions + GlobalHandler
+- [ ] Unit test discount computation
